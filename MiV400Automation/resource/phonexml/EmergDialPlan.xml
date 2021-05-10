@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<AastraIPPhoneConfiguration setType = "local">
+	<ConfigurationItem setType="local">
+		<Parameter>emergency dial plan</Parameter>
+		<Value>333|222|777|137</Value>
+	</ConfigurationItem>
+</AastraIPPhoneConfiguration>

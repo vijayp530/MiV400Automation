@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<AastraIPPhoneExecute>
+<ExecuteItem URI="Led: topsoftkey1=slowflash:active"/>
+</AastraIPPhoneExecute>

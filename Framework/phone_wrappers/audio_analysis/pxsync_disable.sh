@@ -1,0 +1,2 @@
+csxgistsyncdisable halaudio 
+q

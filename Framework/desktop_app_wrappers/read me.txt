@@ -1,0 +1,21 @@
+For MAC:
+	Applications to add under system Preference->Security & Privacy->Accessibility:
+		1. Mitel connect.app
+		2. Terminal.app
+		3. Xcode.app
+	
+	
+How to use desktop_app_wrappers:
+
+1. append the path of desktop_app_wrappers in ProjectNameComponent.py file [Ex: ManhattanComponent.py]
+   sys.path.append('../../Framework/desktop_app_wrappers')
+
+2. import desktop_app_wrapper module in your component_class or in page class file
+   from desktop_app_wrapper import DesktopAppWrapper
+
+3. create object of platform specific wrapper using DesktopAppWrapper class in constructor
+   self.desktop_app = DesktopAppWrapper().get_desktop_tool()
+
+4. use self.desktop_app object to call the methods written in mac_wrapper.py and in autoit_wrapper for mac and windows platform respectively
+
+Note: How to use map files for desktop_app_wrappers: contact framework team (uttam.kumar@mitel.com OR nitin-kumar-2@mitel.com)

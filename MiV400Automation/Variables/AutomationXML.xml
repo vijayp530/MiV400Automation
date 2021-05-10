@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<AastraIPPhoneStatus>
+    <Session>Session</Session>
+    <Message index="1" type="icon">DN</Message>
+    <IconList>
+        <Icon index="1">Icon:None</Icon>
+    </IconList>
+</AastraIPPhoneStatus>

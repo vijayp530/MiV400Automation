@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210218 15:46:26.796" generator="Robot 3.1.2 (Python 2.7.15 on win32)">
+<suite source="C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\TestCases\Manual_Execution_File.robot" id="s1" name="Manual Execution File">
+<kw type="setup" name="Phones Initialization" library="Setup_And_Teardown">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${pbx}" == "Asterisk"</arg>
+<arg>Asterisk_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MxOne"</arg>
+<arg>MxOne_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiV400"</arg>
+<arg>MiV400_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiV5000"</arg>
+<arg>MiV5000_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Telepo"</arg>
+<arg>Telepo_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "WebUI"</arg>
+<arg>WebUI_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiCloud"</arg>
+<arg>MiCloud_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Clearspan"</arg>
+<arg>Clearspan_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiVoice"</arg>
+<arg>MiVoice_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Manual"</arg>
+<arg>Manual_Phone_Initialization</arg>
+<arg>ELSE</arg>
+<arg>FATAL ERROR</arg>
+<arg>Wrong "DUT" value passed!!!</arg>
+</arguments>
+<kw name="Manual_Phone_Initialization" library="Setup_And_Teardown">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>${EXEC_DIR}${/}..${/}Variables/Manual_Phone_Initialization.robot</arg>
+</arguments>
+<status status="PASS" endtime="20210218 15:46:27.629" starttime="20210218 15:46:27.020"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${dut}" == "PhoneA"</arg>
+<arg>Phone_A_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneB"</arg>
+<arg>Phone_B_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneC"</arg>
+<arg>Phone_C_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneD"</arg>
+<arg>Phone_D_Initialization</arg>
+</arguments>
+<assign>
+<var>@{executionPhones}</var>
+</assign>
+<kw name="Phone_A_Initialization" library="Manual_Phone_Initialization">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P1</arg>
+</arguments>
+<assign>
+<var>${PhoneA}</var>
+</assign>
+<msg timestamp="20210218 15:46:27.631" level="FAIL">No library 'P1' found.</msg>
+<status status="FAIL" endtime="20210218 15:46:27.631" starttime="20210218 15:46:27.631"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.631" starttime="20210218 15:46:27.630"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.631" starttime="20210218 15:46:27.630"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.632" starttime="20210218 15:46:27.020"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.632" starttime="20210218 15:46:27.019"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.632" starttime="20210218 15:46:27.018"></status>
+</kw>
+<test id="s1-t1" name="TC01: Active call">
+<tags>
+<tag>MakeActiveCall</tag>
+</tags>
+<timeout value="25 minutes"></timeout>
+<status status="FAIL" endtime="20210218 15:46:27.633" critical="yes" starttime="20210218 15:46:27.632">Parent suite setup failed:
+No library 'P1' found.</status>
+</test>
+<kw type="teardown" name="Check Phone Connection" library="Setup_And_Teardown">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>CHECKING CONNECTION ON PHONES</arg>
+</arguments>
+<status status="PASS" endtime="20210218 15:46:27.637" starttime="20210218 15:46:27.637"></status>
+</kw>
+<kw type="for" name="${phone} IN [ @{executionPhones} ]">
+<msg timestamp="20210218 15:46:27.639" level="FAIL">Variable '@{executionPhones}' not found.</msg>
+<status status="FAIL" endtime="20210218 15:46:27.639" starttime="20210218 15:46:27.637"></status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.639" starttime="20210218 15:46:27.636">Variable '@{executionPhones}' not found.</status>
+</kw>
+<status status="FAIL" endtime="20210218 15:46:27.640" starttime="20210218 15:46:26.833">Suite setup failed:
+No library 'P1' found.
+
+Also suite teardown failed:
+Variable '@{executionPhones}' not found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">MakeActiveCall</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Manual Execution File" pass="0">Manual Execution File</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210218 15:46:27.573" level="ERROR">Error in file 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\Variables\Manual_Phone_Initialization.robot': Importing test library 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py' failed: ImportError: No module named pysftp
+Traceback (most recent call last):
+  File "C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py", line 9, in &lt;module&gt;
+    import pysftp
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\DLLs
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\plat-win
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\Scripts
+  C:\Python27\Lib
+  C:\Python27\DLLs
+  C:\Python27\Lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20210218 15:46:27.591" level="ERROR">Error in file 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\Variables\Manual_Phone_Initialization.robot': Importing test library 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py' failed: ImportError: No module named pysftp
+Traceback (most recent call last):
+  File "C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py", line 9, in &lt;module&gt;
+    import pysftp
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\DLLs
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\plat-win
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\Scripts
+  C:\Python27\Lib
+  C:\Python27\DLLs
+  C:\Python27\Lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20210218 15:46:27.609" level="ERROR">Error in file 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\Variables\Manual_Phone_Initialization.robot': Importing test library 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py' failed: ImportError: No module named pysftp
+Traceback (most recent call last):
+  File "C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py", line 9, in &lt;module&gt;
+    import pysftp
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\DLLs
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\plat-win
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\Scripts
+  C:\Python27\Lib
+  C:\Python27\DLLs
+  C:\Python27\Lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20210218 15:46:27.628" level="ERROR">Error in file 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\Variables\Manual_Phone_Initialization.robot': Importing test library 'C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py' failed: ImportError: No module named pysftp
+Traceback (most recent call last):
+  File "C:\Users\ramkumargo\Desktop\Build\Bit_Bucket_18_feb\robot\6.0_Desktop_Automation\lib\PhoneComponent.py", line 9, in &lt;module&gt;
+    import pysftp
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\DLLs
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\plat-win
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\Scripts
+  C:\Python27\Lib
+  C:\Python27\DLLs
+  C:\Python27\Lib\lib-tk
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\win32\lib
+  C:\Users\ramkumargo\PycharmProjects\untitled\venv\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

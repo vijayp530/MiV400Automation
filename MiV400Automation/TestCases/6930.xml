@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190103 16:05:26.343" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="C:\Robot_Framework\automation-boss\TestCases\CallControl_Suit.robot" id="s1" name="CallControl Suit">
+<kw type="setup" name="Setup Global Variables">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P2</arg>
+</arguments>
+<assign>
+<var>${p1}</var>
+</assign>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p1} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036BEEBE0&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P1</arg>
+</arguments>
+<assign>
+<var>${p2}</var>
+</assign>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p2} = &lt;PhoneComponent.PhoneComponent object at 0x0000000005CFAC18&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P3</arg>
+</arguments>
+<assign>
+<var>${p3}</var>
+</assign>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p3} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036C3D400&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p1}</arg>
+</arguments>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p1} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036BEEBE0&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p2}</arg>
+</arguments>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p2} = &lt;PhoneComponent.PhoneComponent object at 0x0000000005CFAC18&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p3}</arg>
+</arguments>
+<msg timestamp="20190103 16:05:29.391" level="INFO">${p3} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036C3D400&gt;</msg>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:05:29.391" starttime="20190103 16:05:29.391"></status>
+</kw>
+<test id="s1-t1" name="Two Party Call">
+<kw name="I want to make a call between ${p2} and ${p1}" library="PhoneKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone1}</arg>
+<arg>makeCall</arg>
+<arg>${phone2.phone_obj.phone_obj.phone}</arg>
+</arguments>
+<msg timestamp="20190103 16:05:30.392" level="INFO">Calling the extension PhoneHandler.Mitel6920</msg>
+<msg timestamp="20190103 16:05:31.454" level="INFO">Calling the extension 4016</msg>
+<msg timestamp="20190103 16:05:31.454" level="FAIL">Calling method 'makeCall' failed: func "call_extension" - err: "func "call_to_an_extension" - err: "Execution terminated by signal"!"!</msg>
+<status status="FAIL" endtime="20190103 16:05:31.454" starttime="20190103 16:05:29.391"></status>
+</kw>
+<status status="FAIL" endtime="20190103 16:05:31.454" starttime="20190103 16:05:29.391"></status>
+</kw>
+<status status="FAIL" endtime="20190103 16:05:31.454" critical="yes" starttime="20190103 16:05:29.391">Calling method 'makeCall' failed: func "call_extension" - err: "func "call_to_an_extension" - err: "Execution terminated by signal"!"!</status>
+</test>
+<status status="FAIL" endtime="20190103 16:05:31.454" starttime="20190103 16:05:26.359"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="CallControl Suit" pass="0">CallControl Suit</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190103 16:05:28.113" level="WARN">In Mitel 69xx Phone class</msg>
+<msg timestamp="20190103 16:05:28.566" level="WARN">In Mitel 69xx Phone class</msg>
+<msg timestamp="20190103 16:05:28.970" level="WARN">In Mitel 69xx Phone class</msg>
+</errors>
+</robot>

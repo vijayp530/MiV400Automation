@@ -1,0 +1,253 @@
+---
+# These are the xPaths of the respective entries on the phone.
+
+SystemInfoMenu: '//*[@id="sidebar"]/ul[1]/li[1]/a'
+LicenseStatusMenu: '//*[@id="sidebar"]/ul[1]/li[2]/a'
+UserPasswordMenu: '//*[@id="sidebar"]/ul[2]/li[1]/a'
+PhoneLockMenu: '//*[@id="sidebar"]/ul[2]/li[2]/a'
+SoftkeysAndXMLMenu: '//*[@id="sidebar"]/ul[2]/li[3]/a'
+TopSoftKeyMenu: '//*[@id="tabmenu"]/li[2]/a'
+KeypadSpeedDialMenu: '//*[@id="sidebar"]/ul[2]/li[4]/a'
+DirectoryMenu: '//*[@id="sidebar"]/ul[2]/li[5]/a'
+ResetMenu: '//*[@id="sidebar"]/ul[2]/li[6]/a'
+PreferencesMenu: '//*[@id="sidebar"]/ul[3]/li[1]/a'
+AccountCOnfigurationMenu: '//*[@id="sidebar"]/ul[3]/li[2]/a'
+CustomRingtoneMenu: '//*[@id="sidebar"]/ul[3]/li[3]/a'
+NetworkMenu: '//*[@id="sidebar"]/ul[4]/li[1]/a'
+GlobalSIPMenu: '//*[@id="sidebar"]/ul[4]/li[2]/a'
+LineOneMenu: '//*[@id="sidebar"]/ul[4]/li[3]/a'
+LineTwoMenu: '//*[@id="sidebar"]/ul[4]/li[4]/a'
+LineThreeMenu: '//*[@id="sidebar"]/ul[4]/li[5]/a'
+ActionURLMenu: '//*[@id="sidebar"]//li[27]/a'
+ConfigurationServerMenu: '//*[@id="sidebar"]//li[28]/a'
+FirmwareUpdateMenu: '//*[@id="sidebar"]//li[29]/a'
+TLSSupportMenu: '//*[@id="sidebar"]//li[30]/a'
+802SupportMenu: '//*[@id="sidebar"]//li[31]/a'
+TroubleShootingMenu: '//*[@id="sidebar"]//li[32]/a'
+CaptureMenu: '//*[@id="sidebar"]//li[33]/a'
+DiagnosticsMenu: '//*[@id="sidebar"]//li[34]/a'
+ScreenShotMenu: '//*[@id="sidebar"]//li[35]/a'
+LogoffMenu: '//*[@id="header"]//ul//a'
+
+UserPassword:
+    CurrentPassword: '//*[@id="passwordForm"]//tr[2]//input'
+    NewPassword: '//*[@id="passwordForm"]//tr[3]//input'
+    PasswordConfirm: '//*[@id="passwordForm"]//tr[4]//input'
+    SaveSettings: '//*[@id="passwordForm"]/p/input'
+
+DirectoryLink:
+        DirectoryList: '//*[@id="content"]//tr[2]//input'
+        CallersList: '//*[@id="content"]//tr[3]//input'
+        ChooseFile: '//*[@id="file0"]'
+        Upload: '//*[@id="content"]//tr[6]/td[2]/input'
+
+ResetLink:
+    Restart: '//*[@id="resetForm"]//tr[2]//input'
+    FactoryReset: ' //*[@id="resetForm"]//tr[5]//input'
+    RemoveLocalConfig: '//*[@id="resetForm"]//tr[6]//input'
+
+CaptureLink:
+    Port: '//*[@id="tcpdump"]//tr[2]//input'
+    TimeOut: '//*[@id="tcpdump"]//tr[3]//input'
+    GetCapture: '//*[@id="tcpdump"]//tr[4]//input'
+    Start: '//*[@id="tcpdump"]//tr[5]//input'
+    Stop: '//*[@id="tcpdump"]//tr[5]//input'
+    SaveSetting: '//*[@id="tcpdump"]/p/input'
+
+PhoneLockLink:
+    Lock: '//*[@id="PhoneLock"]//tr[5]//input'
+
+TroubleshootLink:
+    Watchdog: '//*[@id="content"]//tr[24]//input'
+    SaveSetting: '//*[@id="content"]//p/input'
+    LogFiles: '//*[@id="content"]/table[1]//tr[5]/td[1]'
+    CrashLog: '//*[@id="content"]/table[1]//tr[4]/td[1]'
+    Log IP: '//*[@id="content"]/form//tr[2]//input'
+    Log Port: '//*[@id="content"]/form//tr[3]/td[2]/input'
+    LINEMGR: '//*[@id="content"]/form//tr[6]/td[2]/input'
+    AUDIOMGR: '//*[@id="content"]/form//tr[7]/td[2]/input'
+    UI: '//*[@id="content"]/form//tr[8]/td[2]/input'
+    MISC: '//*[@id="content"]/form//tr[9]/td[2]/input'
+    SIP: '//*[@id="content"]/form//tr[10]/td[2]/input'
+    DIS: '//*[@id="content"]/form//tr[11]/td[2]/input'
+    PROVIS: '//*[@id="content"]/form//tr[17]/td[2]/input'
+    Get Local.cfg: '//*[@id="content"]/table//tr[2]/td[2]/input'
+    Get Server.cfg: '//*[@id="content"]/table//tr[3]/td[2]/input'
+    Get Log Files: '//*[@id="content"]//tr[5]/td[2]/input'
+
+ConfigServerLink:
+    DownloadProtocol: '//*[@id="mainTable"]//tr[2]//select'
+    HTTPServer: '//*[@id="mainTable"]//tr[12]//input'
+    HTTPPath: '//*[@id="mainTable"]//tr[13]//input'
+    Save: '//*[@id="configForm"]/p/input'
+
+SystemInformation:
+    PhoneModel: '//*[@id="header"]/div[2]//li[1]'
+    MitelLogo: '//*[@id="header"]/div[1]//img'
+    Title: '//*[@id="content"]/h3'
+    Line1Status: '//*[@id="content"]//tr[23]/td[3]'
+    Line2Status: '//*[@id="content"]//tr[24]/td[3]'
+    Line3Status: '//*[@id="content"]//tr[25]/td[3]'
+    copyright: '//*[@class="copyright"]'
+    customerSupport: '//*[@class="support"]'
+
+PageTitle:
+    Forbidden: 'Forbidden Page Title'
+
+GlobalSIP:
+    ProxyServer: '//*[@id="globalSIPform"]//tr[13]/td[2]/input'
+    BackupProxyServer: '//*[@id="globalSIPform"]//tr[15]/td[2]/input'
+    BackupProxyPort: '//*[@id="globalSIPform"]//tr[16]/td[2]/input'
+    OutboundProxyServer: '//*[@id="globalSIPform"]//tr[17]/td[2]/input'
+    BackupOutboundProxyServer: '//*[@id="globalSIPform"]//tr[19]/td[2]/input'
+    BackupOutboundProxyPort: '//*[@id="globalSIPform"]//tr[20]/td[2]/input'
+    RegistrarServer: '//*[@id="globalSIPform"]//tr[21]/td[2]/input'
+    BackupRegistrarServer: '//*[@id="globalSIPform"]//tr[23]/td[2]/input'
+    BackupRegistrarPort: '//*[@id="globalSIPform"]//tr[24]/td[2]/input'
+    DTMFMethod: '//select[@name="dtmfMethod"]'
+    SaveSettings: '//*[@id="globalSIPform"]/p/input'
+    TransportProtocol: '//*[@id="globalSIPform"]//tr[42]/td[2]/select'
+    ExplicitMessageWaitingSubscription: '//*[@id="globalSIPform"]//tr[29]/td[2]'
+    PhoneNumber: '//*[@id="globalSIPform"]//tr[4]//td[2]'
+
+LineStatus:
+    Registered: 'Registered'
+    Timeout: '408'
+    UnAuthorized: '401'
+    Forbidden: '403'
+    ServiceUnavailable: '503'
+
+Line:
+    all: 'all'
+    first: '1'
+    second: '2'
+    third: '3'
+    fourth: '4'
+    fifth: '5'
+    sixth: '6'
+    seventh: '7'
+    eighth: '8'
+    ninth: '9'
+
+ConfiguartionLine:
+    ProxyServer: '//*[@id="mainTable"]//tr[13]/td[2]/input'
+    ProxyPort: '//*[@id="mainTable"]//tr[14]/td[2]/input'
+
+    BackupProxyServer: '//*[@id="mainTable"]//tr[15]/td[2]/input'
+    BackupProxyPort: '//*[@id="mainTable"]//tr[16]/td[2]/input'
+
+    OutboundProxyServer: '//*[@id="mainTable"]//tr[17]/td[2]/input'
+    OutboundProxyPort: '//*[@id="mainTable"]//tr[18]/td[2]/input'
+
+    BackupOutboundProxyServer: '//*[@id="mainTable"]//tr[19]/td[2]/input'
+    BackupOutboundProxyPort: '//*[@id="mainTable"]//tr[20]/td[2]/input'
+
+    RegistrarServer: '//*[@id="mainTable"]//tr[21]/td[2]/input'
+    RegistrarPort: '//*[@id="mainTable"]//tr[22]/td[2]/input'
+
+    BackupRegistrarServer: '//*[@id="mainTable"]//tr[23]/td[2]/input'
+    BackupRegistrarPort: '//*[@id="mainTable"]//tr[24]/td[2]/input'
+
+    Password: '//*[@id="mainTable"]//tr[7]/td[2]/input'
+    SaveSettings: '//*[@id="sipLineSettingsForm"]/p/input'
+
+PhoneDetails:
+    PhoneModel: 'phoneModel'
+    IPAddress: 'ipAddress'
+    ExtensionNumber: 'extensionNumber'
+    PhoneName: 'phoneName'
+
+URL:
+  Mitel: 'www.mitel.com'
+
+NetworkLink:
+    LLDP: '//*[@id="mainTable"]//tr[27]/td[2]/input'
+    SaveSettings: '//*[@id="networkSettingsForm"]/p/input'
+    LLDPPacketInterval: '//*[@id="mainTable"]//tr[28]/td[2]/input'
+
+Protocols:
+    HTTP: 'Hypertext Transfer Protocol'
+    TCP: 'Transmission Control Protocol'
+    UDP: 'User Datagram Protocol'
+    Telnet: 'Telnet'
+    RTP: 'Real Time Transport Protocol'
+    SIP(Invite): 'Session Initiation Protocol (INVITE)'
+    SIP(Publish): 'Session Initiation Protocol (PUBLISH)'
+    SIP(Notify): 'Session Initiation Protocol (NOTIFY)'
+    SIP(Register): 'Session Initiation Protocol (REGISTER)'
+    SIP(Info): 'Session Initiation Protocol (INFO)'
+    RTPEvent: 'RFC 2833 RTP Event'
+
+SoftKeyLink:
+    Softkey1Type: '//*[@id="type1"]'
+    Softkey2Type: '//*[@id="type2"]'
+    Softkey3Type: '//*[@id="type3"]'
+    Softkey4Type: '//*[@id="type4"]'
+    Softkey1Label: '//*[@id="label1"]'
+    Softkey2Label: '//*[@id="label2"]'
+    Softkey3Label: '//*[@id="label3"]'
+    Softkey4Label: '//*[@id="label4"]'
+    Softkey5Label: '//*[@id="label5"]'
+
+Preferences:
+    GlobalRingTones: '//*[@id="preferencesForm"]//tr[47]/td[2]/select'
+    CallWaitingTonePeriod: '//*[@id="preferencesForm"]//input[@name="RemindCallWaiting"]'
+    SaveSettings: '//*[@id="preferencesForm"]//p/input'
+
+directoryFile: "directoryList.csv"
+callerListFile: 'callersList.csv'
+http: 'HTTP'
+checkbox: 'checkbox'
+selected: 'selected'
+unSelected: 'unselected'
+checked: 'Checked'
+unChecked: 'Unchecked'
+AsteriskIP: '10.112.123.89'
+MxOneIP: '10.112.91.54'
+wrongPassword: '1234'
+userid: 'admin'
+passcode: '22222'
+Hostname: "10.112.123.89"
+Username: "root"
+Password: "Jafe@20_20"
+remoteFilePath: "/var/www/html/configuration/aastra.cfg"
+enabled_WebUI: 'web interface enabled: 1'
+disabled_WebUI: 'web interface enabled: 0'
+port: '5060'
+fully: 'Fully'
+partially: 'Partially'
+
+TimeoutServer: '10.112.123.88'
+InvalidPassword: '12345678'
+stop: 'Stop'
+DefaultProxy: '0.0.0.0'
+AccessForbidden: 'Access forbidden'
+TLS: 'TLS'
+UDP: 'UDP'
+SIP: 'SIP'
+Telnet: 'Telnet'
+toneSet: 'tone set'
+france: 'France'
+start: 'Start'
+download: 'Download'
+user: 'user'
+SystemIP: 'SystemIP'
+
+speeddial/Xfer: 'Speeddial/Xfer'
+speeddial/Conference: 'Speeddial/Conf'
+RTCPReportCollector: 'SIP RTCP summary report collector'
+rtp: 'RTP'
+SIPInfo: 'SIP INFO'
+PersistentTLS: 'Persistent TLS'
+
+
+#use this for declaring all variable in one place and use it with index value.
+#DirectoryMenu: &DirectoryMenu [DirectoryList: '//*[@id="content"]//tr[2]//input',
+#                               CallersList: '//*[@id="content"]//tr[3]//input']
+
+
+#10.112.123.54
+#10.112.123.254
+#10.112.123.24
+#10.112.123.18
+#

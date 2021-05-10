@@ -1,0 +1,39 @@
+Cluster: MT
+
+caller_audio1 = hello-world.ulaw
+callee_audio1 = silence.ulaw
+caller_audio = hello-world.ulaw
+callee_audio = hello-world.ulaw
+serverURL = start.sky.shoretel.com
+sbcURL = sbc.sky.shoretel.com
+bossURL = http://10.32.6.89
+bossLoginID = rjiang@cosmo.shoretel.com
+bossPassword = Shoreadmin1#
+bossAccount = Scale-tenant001
+trunkSwitchIP = 10.23.197.253
+trunkIP = 10.163.98.21
+trunkDID = 4087771001
+Codecs = g711u, g729, iLBC30
+SRTP = No
+RingDuration = 3		# Default
+CallDuration = 15		# Default
+talkTime = 15
+
+Cluster: SIT
+
+caller_audio1 = hello-world.ulaw
+callee_audio1 = silence.ulaw
+caller_audio = lyrics-louie-louie.lbc
+callee_audio = lyrics-louie-louie.lbc
+serverURL = start.sit.shoretel.com
+sbcURL = sbc.sit.shoretel.com
+
+Cluster: N08
+
+caller_audio1 = hello-world.ulaw
+callee_audio1 = silence.ulaw
+caller_audio = lyrics-louie-louie.lbc
+callee_audio = lyrics-louie-louie.lbc
+serverURL = start.N08.shoretel.com
+sbcURL = sbc.sky.shoretel.com
+

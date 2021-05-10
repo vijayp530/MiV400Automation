@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190103 16:02:40.643" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="C:\Robot_Framework\automation-boss\TestCases\CallControl_Suit.robot" id="s1" name="CallControl Suit">
+<kw type="setup" name="Setup Global Variables">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P1</arg>
+</arguments>
+<assign>
+<var>${p1}</var>
+</assign>
+<msg timestamp="20190103 16:02:43.675" level="INFO">${p1} = &lt;PhoneComponent.PhoneComponent object at 0x000000000624AC18&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.675" starttime="20190103 16:02:43.675"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P2</arg>
+</arguments>
+<assign>
+<var>${p2}</var>
+</assign>
+<msg timestamp="20190103 16:02:43.675" level="INFO">${p2} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036BEEBE0&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.691" starttime="20190103 16:02:43.675"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P3</arg>
+</arguments>
+<assign>
+<var>${p3}</var>
+</assign>
+<msg timestamp="20190103 16:02:43.691" level="INFO">${p3} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036C3D400&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.691" starttime="20190103 16:02:43.691"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p1}</arg>
+</arguments>
+<msg timestamp="20190103 16:02:43.691" level="INFO">${p1} = &lt;PhoneComponent.PhoneComponent object at 0x000000000624AC18&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.691" starttime="20190103 16:02:43.691"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p2}</arg>
+</arguments>
+<msg timestamp="20190103 16:02:43.692" level="INFO">${p2} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036BEEBE0&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.692" starttime="20190103 16:02:43.691"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${p3}</arg>
+</arguments>
+<msg timestamp="20190103 16:02:43.692" level="INFO">${p3} = &lt;PhoneComponent.PhoneComponent object at 0x0000000036C3D400&gt;</msg>
+<status status="PASS" endtime="20190103 16:02:43.692" starttime="20190103 16:02:43.692"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:02:43.692" starttime="20190103 16:02:43.675"></status>
+</kw>
+<test id="s1-t1" name="Two Party Call">
+<kw name="I want to make a call between ${p2} and ${p1}" library="PhoneKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone1}</arg>
+<arg>makeCall</arg>
+<arg>${phone2.phone_obj.phone_obj.phone}</arg>
+</arguments>
+<msg timestamp="20190103 16:02:44.695" level="INFO">Calling the extension PhoneHandler.Mitel6930</msg>
+<msg timestamp="20190103 16:02:50.768" level="INFO">Calling the extension 4017</msg>
+<status status="PASS" endtime="20190103 16:02:50.768" starttime="20190103 16:02:43.692"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:02:50.768" starttime="20190103 16:02:43.692"></status>
+</kw>
+<kw name="I want to answer the call from ${p1}" library="PhoneKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone2}</arg>
+<arg>answerCall</arg>
+</arguments>
+<msg timestamp="20190103 16:02:50.772" level="INFO">Phone6xxxInterface answer_the_call</msg>
+<status status="PASS" endtime="20190103 16:02:51.409" starttime="20190103 16:02:50.771"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:02:51.409" starttime="20190103 16:02:50.770"></status>
+</kw>
+<kw name="I want to disconnect the call from ${p1}" library="PhoneKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone1}</arg>
+<arg>disconnectCall</arg>
+</arguments>
+<msg timestamp="20190103 16:02:51.409" level="INFO">Disconnecting the call</msg>
+<status status="PASS" endtime="20190103 16:02:55.064" starttime="20190103 16:02:51.409"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:02:55.064" starttime="20190103 16:02:51.409"></status>
+</kw>
+<status status="PASS" endtime="20190103 16:02:55.064" critical="yes" starttime="20190103 16:02:43.692"></status>
+</test>
+<status status="PASS" endtime="20190103 16:02:55.064" starttime="20190103 16:02:40.643"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="CallControl Suit" pass="1">CallControl Suit</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190103 16:02:42.408" level="WARN">In Mitel 69xx Phone class</msg>
+<msg timestamp="20190103 16:02:42.869" level="WARN">In Mitel 69xx Phone class</msg>
+<msg timestamp="20190103 16:02:43.253" level="WARN">In Mitel 69xx Phone class</msg>
+</errors>
+</robot>

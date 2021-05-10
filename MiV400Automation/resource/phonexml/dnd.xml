@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<AastraIPPhoneConfiguration setType = "local">
+        <ConfigurationItem setType="local">
+                <Parameter>topsoftkey4 type</Parameter>
+                <Value>dnd</Value>
+        </ConfigurationItem>
+
+</AastraIPPhoneConfiguration>

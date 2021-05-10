@@ -1,0 +1,20 @@
+<!DOCTYPE Root [
+  <!ENTITY BOSSURL "10.197.108.13">
+  <!ENTITY domain "shoretel.com">
+]>
+
+<Root>
+
+	<build lower_range="17.10.0.54" upper_range="17.10.1.54">
+		<configFiles>
+			<file>BOSSAPIConfiguration.xml</file>
+		</configFiles>
+	</build>
+
+	<build lower_range="17.9.0.54" upper_range="17.9.11.54">
+		<configFiles>
+			<file>dummyconfiguration.xml</file>
+		</configFiles>
+	</build>
+
+</Root>

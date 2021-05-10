@@ -1,0 +1,8 @@
+phone_6869i_telnet_password = 'J@cquesC@rt1er'
+phone_6869i_ssh_password = 'J@cquesC@rt1er'
+phone_6867i_telnet_password = 'J@cquesC@rt1er'
+phone_6867i_ssh_password = 'J@cquesC@rt1er'
+phone_6865i_telnet_password = 'W1lfr1dL@ur1er'
+phone_6865i_ssh_password = 'W1lfr1dL@ur1er'
+phone_6863i_telnet_password = 'W1lfr1dL@ur1er'
+phone_6863i_ssh_password = 'W1lfr1dL@ur1er'

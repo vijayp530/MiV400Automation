@@ -1,0 +1,7 @@
+MxOne: '10.112.110.111'
+Asterisk: "10.112.123.89"
+PersistentTls: "4"
+UDP: "1"
+SRTP_Disabled: "0"
+SRTP_Only: "2"
+

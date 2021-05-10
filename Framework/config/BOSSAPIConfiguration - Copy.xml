@@ -1,0 +1,1208 @@
+<!DOCTYPE Root [
+  <!--<!ENTITY BOSSURL "10.197.108.13">-->
+  <!ENTITY BOSSURL "portal.sit.shoretel.com">
+  <!ENTITY domain "shoretel.com">
+]>
+
+<Root>
+
+	<api name="login">
+		<params>
+			<url>http://&BOSSURL;/UserAccount/LogOn</url>
+			<UserName>staff@&domain;</UserName>
+			<Password>Abc123!!</Password>
+			<RememberMe>true</RememberMe>
+		</params>
+	</api>
+
+	<api name="switch_account">
+		<params>
+			<url>http://&BOSSURL;/Account/Details</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="create_tenant">
+		<params>
+			<url>http://&BOSSURL;/AccountInternal/CreateAccountInternal</url>
+			<CountryKey>UnitedStates</CountryKey>
+			<Address1>loc1</Address1>
+			<Address2>loc2</Address2>
+			<City>holtsville</City>
+			<StateProvinceKey>NewYork</StateProvinceKey>
+			<ZipCode>00501</ZipCode>
+			<bypassValidation>true</bypassValidation>
+			<FirstName>None</FirstName>
+			<LastName>None</LastName>
+			<PhoneNumber>None</PhoneNumber>
+			<CompanyName>bosswebapi_1</CompanyName>
+			<LocationName>location</LocationName>
+			<Currency>1</Currency>
+			<LocationAreaCode>631</LocationAreaCode>
+			<PersonFirstName>q</PersonFirstName>
+			<PersonLastName>w</PersonLastName>
+			<PersonBusinessEmail>qw@sh.com</PersonBusinessEmail>
+			<PersonPassword>mitel2017!</PersonPassword>
+			<CreatePartition>true</CreatePartition>
+			<ClusterName>10</ClusterName>
+			<TimeZoneName>Eastern Standard Time</TimeZoneName>
+			<InternalAccountType>1</InternalAccountType>
+			<PartnerType>1</PartnerType>
+			<PriceTier>1</PriceTier>
+		</params>
+	</api>
+
+	<api name="add_tn">
+		<params>
+			<url>http://&BOSSURL;/Tn/AddTns</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<wizard>1</wizard>
+			<step>3</step>
+			<RequestedBy>0</RequestedBy>
+			<RequestSources>2</RequestSources>
+			<CaseNumber>None</CaseNumber>
+			<TnsString>+16462000502</TnsString>
+			<ServiceUsage>149</ServiceUsage>
+			<TnAccountId>0</TnAccountId>
+			<TnLocationId>125</TnLocationId>
+			<Type>client</Type>
+			<TrunkgroupId>4</TrunkgroupId>
+			<TnCountryId>840</TnCountryId>
+			<ExtensionConflicts>None</ExtensionConflicts>
+			<VendorOrderNumber>121</VendorOrderNumber>
+		</params>
+	</api>
+
+	<api name="update_tn">
+		<params>
+			<url>http://&BOSSURL;/Tn/UpdateTns</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<wizard>1</wizard>
+			<step>1</step>
+			<State>3</State>
+			<TnCountryId>None</TnCountryId>
+			<TrunkgroupId>-1</TrunkgroupId>
+			<PortOutDate>11/3/2017</PortOutDate>
+			<AccountActionId>-1</AccountActionId>
+			<TnAccountId>None</TnAccountId>
+			<tnLocationId>-1</tnLocationId>
+			<tnClusterId>-1</tnClusterId>
+			<Type>0</Type>
+			<ServiceUsage>-1</ServiceUsage>
+			<TnsString>None</TnsString>
+			<ExtensionConflicts>None</ExtensionConflicts>
+		</params>
+	</api>
+
+	<api name="assign_location_as_site">
+		<params>
+			<url>http://&BOSSURL;/Partition/EditPartitionSites</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<partitionId>1</partitionId>
+			<siteData>[]</siteData>
+		</params>
+	</api>
+
+	<api name="add_user">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_AddEditPerson</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<User_LocationId>-1</User_LocationId>
+			<partitionId>-1</partitionId>
+			<personId>0</personId>
+			<Person_FirstName>first</Person_FirstName>
+			<Person_LastName>last</Person_LastName>
+			<Person_BusinessEmail>firstlast@sh.com</Person_BusinessEmail>
+			<Notes dt="None">None</Notes>
+			<Person_LocationId>125</Person_LocationId>
+			<Profile_TnId>-1</Profile_TnId>
+			<ActivationDate dt="None">None</ActivationDate>
+			<PhoneType>-1</PhoneType>
+			<ProfileId>-1</ProfileId>
+			<Person_Profile_Extension dt="None">None</Person_Profile_Extension>
+			<WaiveNRR>false</WaiveNRR>
+			<ProfileOptions>[]</ProfileOptions>
+			<Hardware>false</Hardware>
+			<HardwarePhoneModel>380</HardwarePhoneModel>
+			<HardwarePhoneShipDate dt="None">None</HardwarePhoneShipDate>
+			<AssignPhone>false</AssignPhone>
+			<MacAddressAssignPhone dt="None">None</MacAddressAssignPhone>
+			<AssignPhoneModel>19</AssignPhoneModel>
+			<UserGroup dt="None">None</UserGroup>
+			<Person_Title dt="None">None</Person_Title>
+			<Person_PersonalEmail dt="None">None</Person_PersonalEmail>
+			<Person_CellPhone dt="None">None</Person_CellPhone>
+			<Person_HomePhone dt="None">None</Person_HomePhone>
+			<PreferredNotificationEmail>BusinessEmail</PreferredNotificationEmail>
+			<PreferredContactMethod>BusinessEmail</PreferredContactMethod>
+			<NoLogin>false</NoLogin>
+			<Person_Username>121@sh.com</Person_Username>
+			<Person_Password>Abc123!!</Person_Password>
+			<RequestedBy>1457</RequestedBy>
+			<RequestSources>2</RequestSources>
+			<CaseNumber dt="None">None</CaseNumber>
+			<Roles>[]</Roles>
+			<ExcludeGroupFeatures>false</ExcludeGroupFeatures>
+			<EnableIM>false</EnableIM>
+			<EnableVideo>false</EnableVideo>
+			<EnableVideoMobility>false</EnableVideoMobility>
+			<Phone_LocationId>125</Phone_LocationId>
+		</params>
+	</api>
+
+	<api name="add_tn_to_user">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_AddEditPerson</url>
+			<accountId>12033</accountId>
+			<locationId>-1</locationId>
+			<partitionId>415</partitionId>
+			<personId>8795</personId>
+			<Person_FirstName>abc4</Person_FirstName>
+			<Person_LastName>xyz</Person_LastName>
+			<Person_BusinessEmail>sh4@sh.com</Person_BusinessEmail>
+			<Notes dt="None">None</Notes>
+			<Person_LocationId>1759</Person_LocationId>
+			<Profile_TnId>+16462000503</Profile_TnId>
+			<ActivationDate dt="None">11/16/2017</ActivationDate>
+			<PhoneType>355</PhoneType>
+			<ProfileId>-1</ProfileId>
+			<Person_Profile_Extension dt="None">1003</Person_Profile_Extension>
+			<WaiveNRR>false</WaiveNRR>
+			<ProfileOptions>[{"ProductId":474,"Name":"Connect CLOUD Instant Messaging"},{"ProductId":434,"Name":"Connect CLOUD Teamwork"}]</ProfileOptions>
+			<Hardware>false</Hardware>
+			<HardwarePhoneModel>380</HardwarePhoneModel>
+			<HardwarePhoneShipDate dt="None">None</HardwarePhoneShipDate>
+			<AssignPhone>false</AssignPhone>
+			<MacAddressAssignPhone dt="None">None</MacAddressAssignPhone>
+			<AssignPhoneModel>19</AssignPhoneModel>
+			<UserGroup>4</UserGroup>
+			<Person_Title dt="None">None</Person_Title>
+			<Person_PersonalEmail dt="None">None</Person_PersonalEmail>
+			<Person_CellPhone dt="None">None</Person_CellPhone>
+			<Person_HomePhone dt="None">None</Person_HomePhone>
+			<PreferredNotificationEmail>BusinessEmail</PreferredNotificationEmail>
+			<PreferredContactMethod>BusinessEmail</PreferredContactMethod>
+			<NoLogin>false</NoLogin>
+			<Person_Username>sh4@sh.com</Person_Username>
+			<Person_Password>Abc123!!</Person_Password>
+			<RequestedBy>8788</RequestedBy>
+			<RequestSources>2</RequestSources>
+			<CaseNumber dt="None">None</CaseNumber>
+			<Roles>[]</Roles>
+			<ExcludeGroupFeatures>false</ExcludeGroupFeatures>
+			<EnableIM>false</EnableIM>
+			<EnableVideo>false</EnableVideo>
+			<EnableVideoMobility>false</EnableVideoMobility>
+			<Phone_LocationId>1759</Phone_LocationId>
+		</params>
+	</api>
+
+	<api name="add_location">
+		<params>
+			<url>http://&BOSSURL;/Location/AJAX_AddLocation</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<Address_Address1>1385 Broadway</Address_Address1>
+			<Address_Address2 dt="None">None</Address_Address2>
+			<Address_City>new york</Address_City>
+			<Address_ZipCode>10018</Address_ZipCode>
+			<Address_CountryKey>UnitedStates</Address_CountryKey>
+			<Address_StateProvinceKey>NewYork</Address_StateProvinceKey>
+			<Address_FirstName dt="None">None</Address_FirstName>
+			<Address_LastName dt="None">None</Address_LastName>
+			<Address_PhoneNumber dt="None">None</Address_PhoneNumber>
+			<Address_bypassValidation>false</Address_bypassValidation>
+			<Location_Subtenant>loc1</Location_Subtenant>
+			<LocationDetails_LocationNameFormatted>loc1</LocationDetails_LocationNameFormatted>
+			<LocationNotes dt="None">None</LocationNotes>
+			<LocationEmergencyAni dt="None">None</LocationEmergencyAni>
+			<Location_IsCommissionable>false</Location_IsCommissionable>
+			<Location_InvoiceGroupId>580</Location_InvoiceGroupId>
+			<ITConsultantPartnerId>0</ITConsultantPartnerId>
+			<timeZone>Eastern Standard Time</timeZone>
+			<AreaCode>212</AreaCode>
+			<AdditionalLocalAreaCodes>[]</AdditionalLocalAreaCodes>
+			<Approve>false</Approve>
+		</params>
+	</api>
+
+	<api name="add_edit_phone">
+		<params>
+			<url>http://&BOSSURL;/Phone/AJAX_AddEditPhone</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<Phone_LocationId>1385</Phone_LocationId>
+			<Phone_MacAddress>11:11:11:11:11:11</Phone_MacAddress>
+			<Phone_PhoneTypeId>19</Phone_PhoneTypeId>
+			<Phone_Exists>false</Phone_Exists>
+			<Phone_HomeProfileId dt="None">None</Phone_HomeProfileId>
+		</params>
+	</api>
+
+	<api name="add_profile">
+		<params>
+			<url>http://&BOSSURL;/Partition/AJAX_AddProfile</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<profileId>-1</profileId>
+			<RequestedByAdd>222</RequestedByAdd>
+			<RequestSourcesAdd>2</RequestSourcesAdd>
+			<CaseNumberAdd dt="None">None</CaseNumberAdd>
+			<AddFirstName>aa</AddFirstName>
+			<AddLastName>bb</AddLastName>
+			<AddEmail>aa@sh.com</AddEmail>
+			<AddLocationToAssign>123</AddLocationToAssign>
+			<DateLiveAdd>11/17/2017</DateLiveAdd>
+			<AddAutoAssignExtn>false</AddAutoAssignExtn>
+			<AddExtension>1002</AddExtension>
+			<AddWaiveNRR>false</AddWaiveNRR>
+			<ProductId>354</ProductId>
+		</params>
+	</api>
+
+	<api name="remove_phone_entry">
+		<params>
+			<url>http://&BOSSURL;/Phone/RemovePhoneEntry</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<personId>-1</personId>
+			<macAddress>11:11:11:11:11:11</macAddress>
+		</params>
+	</api>
+
+	<api name="update_location">
+		<params>
+			<url>http://&BOSSURL;/Location/UpdateAddress</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<Address_Address1>1385 Broadway</Address_Address1>
+			<Address_Address2 dt="None">None</Address_Address2>
+			<Address_City>new york</Address_City>
+			<Address_ZipCode>10018</Address_ZipCode>
+			<Address_CountryKey>UnitedStates</Address_CountryKey>
+			<Address_StateProvinceKey>NewYork</Address_StateProvinceKey>
+			<Address_FirstName dt="None">None</Address_FirstName>
+			<Address_LastName dt="None">None</Address_LastName>
+			<Address_PhoneNumber dt="None">None</Address_PhoneNumber>
+			<Address_bypassValidation>false</Address_bypassValidation>
+			<Location_Subtenant>loc1</Location_Subtenant>
+			<LocationDetails_LocationNameFormatted>loc1</LocationDetails_LocationNameFormatted>
+			<LocationNotes dt="None">None</LocationNotes>
+			<LocationEmergencyAni dt="None">None</LocationEmergencyAni>
+			<Location_IsCommissionable>false</Location_IsCommissionable>
+			<ITConsultantPartnerId dt="None">None</ITConsultantPartnerId>
+			<LocationPhoneIp dt="None">None</LocationPhoneIp>
+			<LocationLanIp dt="None">None</LocationLanIp>
+			<LocationDemarcation dt="None">None</LocationDemarcation>
+			<ConnectivityTypeId>4</ConnectivityTypeId>
+			<ConnectivityLocationId dt="None">None</ConnectivityLocationId>
+			<ConnectivityAccountId dt="None">None</ConnectivityAccountId>
+			<ConnectivityCarrier dt="None">None</ConnectivityCarrier>
+			<timeZone>Eastern Standard Time</timeZone>
+			<AreaCode>212</AreaCode>
+			<AdditionalLocalAreaCodes>[]</AdditionalLocalAreaCodes>
+			<Approve>false</Approve>
+		</params>
+	</api>
+
+	<api name="close_location">
+		<params>
+			<url>http://&BOSSURL;/Location/AJAX_FinishCloseLocation</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<serviceList dt="None">None</serviceList>
+			<voidServiceList dt="None">None</voidServiceList>
+			<notes dt="None">None</notes>
+			<emails dt="None">None</emails>
+			<billCeaseDate>11/16/2017</billCeaseDate>
+			<closeOrderId>1</closeOrderId>
+			<requestedById>1</requestedById>
+			<requestSourceId>2</requestSourceId>
+			<closeLocationId>1</closeLocationId>
+			<caseNumber dt="None">None</caseNumber>
+		</params>
+	</api>
+
+	<api name="validate_canclose_location">
+		<params>
+			<url>http://&BOSSURL;/Location/AJAX_ValidateCanClose</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<billCeaseDate>11/16/2017</billCeaseDate>
+		</params>
+	</api>
+
+	<api name="get_suitable_invoice_groups">
+		<params>
+			<url>http://&BOSSURL;/Location/AJAX_GetSuitableInvoiceGroups</url>
+			<accountId>0</accountId>
+			<countryKey>UnitedStates</countryKey>
+		</params>
+	</api>
+
+	<api name="update_order_details">
+		<params>
+			<url>http://&BOSSURL;/Account/AJAX_UpdateOrderDetails</url>
+			<accountId>0</accountId>
+			<locationId>-1</locationId>
+			<orderId>1</orderId>
+			<effectiveDate>None</effectiveDate>
+			<migrationDate>None</migrationDate>
+			<projectManagerId>-1</projectManagerId>
+			<dataEngineerId>-1</dataEngineerId>
+			<clientProgrammerId>-1</clientProgrammerId>
+			<orderStatusId>0</orderStatusId>
+		</params>
+	</api>
+
+	<api name="add_contract">
+		<params>
+			<url>http://&BOSSURL;/Account/AddQuote</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<accountValues>
+				<CompanyName>bosswebapi_8</CompanyName>
+				<ExistingCompanyName dt="None">None</ExistingCompanyName>
+				<Salesperson>5</Salesperson>
+				<PartnerType>-1</PartnerType>
+				<ReferralPartner>null</ReferralPartner>
+				<PersonFirstName>sampleuser</PersonFirstName>
+				<PersonLastName>sample</PersonLastName>
+				<PersonBusinessEmail>sampleuser@shoretel.com</PersonBusinessEmail>
+				<PersonPassword>Abc123!!</PersonPassword>
+				<PlatformType>11</PlatformType>
+				<InvoiceGroup dt="int">-1</InvoiceGroup>
+				<InvoiceGroupCurrency>1</InvoiceGroupCurrency>
+				<InvoiceGroupCountry>840</InvoiceGroupCountry>
+				<CreatePartition>0</CreatePartition>
+				<PartitionName> Connect</PartitionName>
+				<PartitionInstance>8</PartitionInstance>
+			</accountValues>
+
+			<locationsValues>
+				<Index dt="int">0</Index>
+				<Warning>None</Warning>
+				<ValidationResult>{'IsValid':'true','Description':''}</ValidationResult>
+				<ValidateLocation>false</ValidateLocation>
+				<LocationName>sample location</LocationName>
+				<Address1>1385 Broadway</Address1>
+				<Address2>None</Address2>
+				<Address3 dt="None">None</Address3>
+				<Address4 dt="None">None</Address4>
+				<Address5 dt="None">None</Address5>
+				<Address6 dt="None">None</Address6>
+				<Address7 dt="None">None</Address7>
+				<Address7 dt="None">None</Address7>
+				<City>New York</City>
+				<State>NewYork</State>
+				<Zip>10018</Zip>
+				<Country>UnitedStates</Country>
+				<ValidateLocation>false</ValidateLocation>
+				<SubPremises dt="None">None</SubPremises>
+				<Connectivity>ThisLocation</Connectivity>
+				<SubPremises dt="None">None</SubPremises>
+				<DependentLocality dt="None">None</DependentLocality>
+				<FirstName dt="None">None</FirstName>
+				<LastName dt="None">None</LastName>
+				<PhoneNumber dt="None">None</PhoneNumber>
+				<LocationAreaCode dt="None">None</LocationAreaCode>
+			</locationsValues>
+
+			<productsValues>
+				<Warning dt="None">None</Warning>
+				<ProductId dt="int">355</ProductId>
+				<Quantity dt="int">1</Quantity>
+				<LocationName>All locations using this local catalog</LocationName>
+				<LocationIndex>-1</LocationIndex>
+				<MRR dt="int">12</MRR>
+				<NRR dt="int">23</NRR>
+				<Trial>false</Trial>
+				<WaiveNrr>false</WaiveNrr>
+				<ServiceClassName>bundle</ServiceClassName>
+				<ProductName>Connect CLOUD Standard</ProductName>
+				<ListPriceId>71776</ListPriceId>
+				<ListPriceText>49.99/50.00</ListPriceText>
+			</productsValues>
+
+			<contractValues>
+				<ContractTypeId>1</ContractTypeId>
+				<ContractNumber>12345</ContractNumber>
+				<ContractForecastDate>11/07/2017</ContractForecastDate>
+				<ContractNotes>None</ContractNotes>
+				<ContractLength>36</ContractLength>
+				<ContractProfileAmount>None</ContractProfileAmount>
+				<ContractFileName>SampleContract.pdf</ContractFileName>
+				<ContractFilePath>/tmp/636456283916180011_SampleContract.pdf</ContractFilePath>
+			</contractValues>
+
+			<termValues>
+				<TermVersion>4</TermVersion>
+				<TermRenewAutomatically>1</TermRenewAutomatically>
+				<TermInstallUOM>D</TermInstallUOM>
+				<TermInstallQuantity>60</TermInstallQuantity>
+				<DateSigned>11/07/2017</DateSigned>
+			</termValues>
+		</params>
+	</api>
+
+	<api name="update_billing_location">
+		<params>
+			<url>http://&BOSSURL;/Account/AJAX_UpdateBillingLocation</url>
+			<accountId>11618</accountId>
+			<contractId>128</contractId>
+			<billingLocationId>230</billingLocationId>
+		</params>
+	</api>
+
+	<api name="create_partition">
+		<params>
+			<url>http://&BOSSURL;/Partition/PartitionCreate</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<ClusterId>10</ClusterId>
+			<PartitionName>new_partition</PartitionName>
+			<createSites>true</createSites>
+			<siteData>[]</siteData>
+		</params>
+	</api>
+
+	<api name="check_usergroup_availability">
+		<params>
+			<url>http://&BOSSURL;/UserGroup/AJAX_CheckUserGroupAvailability</url>
+			<accountId>11618</accountId>
+			<partitionId>100</partitionId>
+			<userGroupName>dummy</userGroupName>
+			<groupId>-1</groupId>
+		</params>
+	</api>
+
+	<api name="create_usergroup">
+		<params>
+			<url>http://&BOSSURL;/UserGroup/AJAX_CreateUserGroup</url>
+			<accountId>11618</accountId>
+			<partitionId>100</partitionId>
+			<groupId>-1</groupId>
+			<Name>dummy</Name>
+			<ProfileTypeId>2</ProfileTypeId>
+			<HoldMusicId dt="None">None</HoldMusicId>
+			<ClassofService>0</ClassofService>
+			<AccountCodeMode>0</AccountCodeMode>
+			<AllowCallPickup>false</AllowCallPickup>
+			<AllowOverheadPaging>false</AllowOverheadPaging>
+			<AllowHuntgroupStateChange>false</AllowHuntgroupStateChange>
+			<AllowExtensionAssignment>false</AllowExtensionAssignment>
+			<ShowCallerId>false</ShowCallerId>
+			<ShowCallHistory>false</ShowCallHistory>
+			<AllowAvailabilityStateChange>false</AllowAvailabilityStateChange>
+			<DirectedIntercom>0</DirectedIntercom>
+			<WhisperPage>0</WhisperPage>
+			<Barge>0</Barge>
+			<SilentMonitor>0</SilentMonitor>
+			<AllowVoicemailCallBack>false</AllowVoicemailCallBack>
+			<AllowBroadcastList>false</AllowBroadcastList>
+			<AllowSystemList>false</AllowSystemList>
+			<AllowDownloadWav>false</AllowDownloadWav>
+		</params>
+	</api>
+
+	<api name="update_usergroup">
+		<params>
+			<url>http://&BOSSURL;/UserGroup/AJAX_UpdateUserGroup</url>
+			<accountId>11618</accountId>
+			<partitionId>100</partitionId>
+			<groupId>-1</groupId>
+			<Name>dummy</Name>
+			<ProfileTypeId>2</ProfileTypeId>
+			<HoldMusicId dt="None">None</HoldMusicId>
+			<ClassofService>0</ClassofService>
+			<AccountCodeMode>0</AccountCodeMode>
+			<AllowCallPickup>false</AllowCallPickup>
+			<AllowOverheadPaging>false</AllowOverheadPaging>
+			<AllowHuntgroupStateChange>false</AllowHuntgroupStateChange>
+			<AllowExtensionAssignment>false</AllowExtensionAssignment>
+			<ShowCallerId>false</ShowCallerId>
+			<ShowCallHistory>false</ShowCallHistory>
+			<AllowAvailabilityStateChange>false</AllowAvailabilityStateChange>
+			<DirectedIntercom>0</DirectedIntercom>
+			<WhisperPage>0</WhisperPage>
+			<Barge>0</Barge>
+			<SilentMonitor>0</SilentMonitor>
+			<AllowVoicemailCallBack>false</AllowVoicemailCallBack>
+			<AllowBroadcastList>false</AllowBroadcastList>
+			<AllowSystemList>false</AllowSystemList>
+			<AllowDownloadWav>false</AllowDownloadWav>
+		</params>
+	</api>
+
+	<api name="delete_usergroup">
+		<params>
+			<url>http://&BOSSURL;/UserGroup/AJAX_DeleteUserGroups</url>
+			<accountId>11618</accountId>
+			<groupIds>-1</groupIds>
+		</params>
+	</api>
+
+	<api name="update_contract_status">
+		<params>
+			<url>http://&BOSSURL;/Account/AJAX_UpdateContractStatus</url>
+			<accountId>11618</accountId>
+			<contractId>10</contractId>
+			<contractStatusId>1</contractStatusId>
+			<siteData>[]</siteData>
+		</params>
+	</api>
+
+	<api name="change_password">
+		<params>
+			<url>http://&BOSSURL;/Person/ChangePassword</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<personID>1</personID>
+			<reset>false</reset>
+			<OldPersonPassword>Abc123!!</OldPersonPassword>
+			<NewPersonPassword>Abc123@@</NewPersonPassword>
+			<ConfirmPersonPassword>Abc123@@</ConfirmPersonPassword>
+			<NotifyUser>true</NotifyUser>
+			<NotifyUser>true</NotifyUser>
+			<EmailList dt="None">None</EmailList>
+		</params>
+	</api>
+
+	<api name="assign_role">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_UpdatePersonRoles</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<personID>1</personID>
+			<rolesData>
+				<Id>8</Id>
+				<Name>Technical</Name>
+				<Scope>A</Scope>
+				<LocationId dt="None">None</LocationId>
+				<IsEditable>true</IsEditable>
+			</rolesData>
+		</params>
+	</api>
+
+	<api name="unassign_role">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_UpdatePersonRoles</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<personID>1</personID>
+			<rolesData>[]</rolesData>
+		</params>
+	</api>
+
+	<api name="close_user">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_ClosePersonWizard</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<partitionId>1</partitionId>
+			<serviceList dt="None">None</serviceList>
+			<voidServiceList dt="None">None</voidServiceList>
+			<notes dt="None">None</notes>
+			<emails dt="None">None</emails>
+			<billCeaseDate>12/21/2017</billCeaseDate>
+			<closeOrderId>1</closeOrderId>
+			<requestedById>1456</requestedById>
+			<requestSourceId>2</requestSourceId>
+			<profileId>-1</profileId>
+			<caseNumber dt="None">None</caseNumber>
+			<personId>1473</personId>
+			<keepGlobalTn>false</keepGlobalTn>
+		</params>
+	</api>
+
+	<api name="get_async_web_job">
+		<params>
+			<url>http://&BOSSURL;/AsyncWebJob/Get</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<id>96</id>
+		</params>
+	</api>
+
+	<api name="get_contract_line_item_data">
+		<params>
+			<url>http://&BOSSURL;/Account/ContractLineItemHandlerData</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<contractId>127</contractId>
+		</params>
+	</api>
+
+	<api name="add_instance_to_contract">
+		<params>
+			<url>http://&BOSSURL;/Account/EditClustersEditableGridHandler</url>
+			<AccountId dt="int">1</AccountId>
+			<ClusterId>-1</ClusterId>
+			<Cluster>MTA (COSMO)</Cluster>
+			<Primary>false</Primary>
+		</params>
+	</api>
+
+	<api name="upload_pdf">
+		<params>
+			<url>http://&BOSSURL;/Account/UploadContractFile</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="validate_location">
+		<params>
+			<url>http://&BOSSURL;/Address/Validate</url>
+			<CountryKey>UnitedStates</CountryKey>
+			<Address1>1385 Broadway</Address1>
+			<Address2 dt="None">None</Address2>
+			<City>New York</City>
+			<StateProvinceKey>NewYork</StateProvinceKey>
+			<ZipCode>10018</ZipCode>
+		</params>
+	</api>
+
+	<api name="validate_location_name">
+		<params>
+			<url>http://&BOSSURL;/Location/AJAX_ValidateLocationName</url>
+			<accountId>11</accountId>
+			<locationName>loc</locationName>
+			<existingLocationId>-1</existingLocationId>
+		</params>
+	</api>
+
+	<api name="check_extension_availability">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_CheckExtensionAvailability</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<extension>1001</extension>
+		</params>
+	</api>
+
+	<api name="check_mac_address_availability">
+		<params>
+			<url>http://&BOSSURL;/Phone/AJAX_CheckMacAddressAvailability</url>
+			<macAddress>1</macAddress>
+		</params>
+	</api>
+
+	<api name="check_username_availability">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_CheckUserNameAvailability</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<username>sh@sh.com</username>
+			<excludePersonId>0</excludePersonId>
+		</params>
+	</api>
+
+	<api name="check_companyname_availability">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_CheckExtensionAvailability</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<extension>1001</extension>
+		</params>
+	</api>
+
+	<api name="reassign_tn">
+		<params>
+			<url>http://&BOSSURL;/Partition/ReassignNumber</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<profileId>1</profileId>
+			<reassignTn>No Change</reassignTn>
+			<reassignExtension>1002</reassignExtension>
+		</params>
+	</api>
+
+	<api name="validate_assign_profile">
+		<params>
+			<url>http://&BOSSURL;/Person/AJAX_ValidateAssignProfile</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<username>aa@sh.com</username>
+			<productId>354</productId>
+		</params>
+	</api>
+
+	<api name="assign_number">
+		<params>
+			<url>http://&BOSSURL;/Partition/AssignNumber</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>415</partitionId>
+			<tn>+16462000502</tn>
+			<FirstName>aa</FirstName>
+			<LastName>bb</LastName>
+			<Email>aa@sh.com</Email>
+			<LocationToAssign>354</LocationToAssign>
+			<ProductId>354</ProductId>
+			<extension>1003</extension>
+			<DateLive>11/19/2017</DateLive>
+			<RequestedBy>354</RequestedBy>
+			<RequestSources>2</RequestSources>
+			<CaseNumber dt="None">None</CaseNumber>
+			<WaiveNRR>false</WaiveNRR>
+		</params>
+	</api>
+
+	<api name="unassign_number">
+		<params>
+			<url>http://&BOSSURL;/Partition/UnassignNumber</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>415</partitionId>
+			<profileIds>502</profileIds>
+			<RequestedBy>545</RequestedBy>
+			<RequestSources>2</RequestSources>
+			<CaseNumber dt="None">None</CaseNumber>
+			<Notes dt="None">None</Notes>
+			<OtherEmailAddress dt="None">None</OtherEmailAddress>
+			<CloseOrderReasons>1</CloseOrderReasons>
+			<ProfileIds>12017</ProfileIds>
+		</params>
+	</api>
+
+	<api name="update_cosmo_partition_dialplan">
+		<params>
+			<url>http://&BOSSURL;/Partition/UpdateCosmoPartitionDialPlan</url>
+			<!--<accountId>1</accountId>-->
+			<!--<locationId>-1</locationId>-->
+			<!--<partitionId>415</partitionId>-->
+			<NewExtensionLength>4</NewExtensionLength>
+			<Range0>6</Range0>
+			<Range1>1</Range1>
+			<Range2>13</Range2>
+			<Range3>1</Range3>
+			<Range4>1</Range4>
+			<Range5>1</Range5>
+			<Range6>1</Range6>
+			<Range7>1</Range7>
+			<Range8>1</Range8>
+			<Range9>2</Range9>
+		</params>
+	</api>
+
+	<api name="update_cosmo_conference">
+		<params>
+			<url>http://&BOSSURL;/Account/UpdateShoretelCosmoConference</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>415</partitionId>
+			<featureId>21</featureId>
+			<StartConferenceWhen>0</StartConferenceWhen>
+			<OutDialPrompt>0</OutDialPrompt>
+			<NotifyUser>true</NotifyUser>
+			<NotifyUser>false</NotifyUser>
+			<EmailList>sh@sh.com</EmailList>
+		</params>
+	</api>
+
+	<api name="create_cosmo_conference_handler">
+		<params>
+			<url>http://&BOSSURL;/Account/CreateCosmoConferenceHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>415</partitionId>
+			<featureId dt="None">None</featureId>
+			<profileId>0</profileId>
+		</params>
+	</api>
+
+	<api name="create_cosmo_conference">
+		<params>
+			<url>http://&BOSSURL;/Account/CreateCosmoConferenceWizard</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<RequestedBy>415</RequestedBy>
+			<CaseNumber dt="None">None</CaseNumber>
+			<serviceClassId>233</serviceClassId>
+		</params>
+	</api>
+
+	<api name="delete_cosmo_conference">
+		<params>
+			<url>http://&BOSSURL;/Service/AJAX_DeleteCosmoConference</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<serviceIds>31509</serviceIds>
+			<notes dt="None">None</notes>
+			<emails dt="None">None</emails>
+			<billCeaseDate>11/21/2017</billCeaseDate>
+			<closeOrderReasonId>1</closeOrderReasonId>
+			<requestedById>31509</requestedById>
+			<orderRequestSourceId>2</orderRequestSourceId>
+			<caseNumber dt="None">None</caseNumber>
+		</params>
+	</api>
+
+	<api name="create_auto_attendant">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/CreateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<data>-1</data>
+			<componentType>Autoattendant</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+		</params>
+	</api>
+
+	<api name="edit_auto_attendant">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/UpdateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<data>-1</data>
+			<componentType>Autoattendant</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+
+		</params>
+	</api>
+
+	<api name="delete_auto_attendant">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/DeleteCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<componentType>Autoattendant</componentType>
+		</params>
+	</api>
+
+	<api name="create_hunt_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/CreateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<data>-1</data>
+			<componentType>HuntGroup</componentType>
+			<profileLocationId>undefined</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+		</params>
+	</api>
+
+	<api name="edit_hunt_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/UpdateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<data>-1</data>
+			<componentType>HuntGroup</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+
+		</params>
+	</api>
+
+	<api name="delete_hunt_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/DeleteCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<componentType>HuntGroup</componentType>
+		</params>
+	</api>
+
+	<api name="create_extension_list">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/CreateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<data>-1</data>
+			<componentType>ExtensionList</componentType>
+			<profileLocationId>undefined</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+		</params>
+	</api>
+
+	<api name="edit_extension_list">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/UpdateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<data>-1</data>
+			<componentType>ExtensionList</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+
+		</params>
+	</api>
+
+	<api name="delete_extension_list">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/DeleteCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<componentType>ExtensionList</componentType>
+		</params>
+	</api>
+
+	<api name="create_paging_group">
+		<params>
+			<url>https://&BOSSURL;/CallFlow/CreateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<data>-1</data>
+			<componentType>PagingGroup</componentType>
+			<profileLocationId>undefined</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+		</params>
+	</api>
+
+	<api name="edit_paging_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/UpdateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<data>-1</data>
+			<componentType>PagingGroup</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+
+		</params>
+	</api>
+
+	<api name="delete_paging_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/DeleteCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<componentType>PagingGroup</componentType>
+		</params>
+	</api>
+
+	<api name="get_cosmo_component">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/GetCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>1</partitionId>
+			<id dt="None">None</id>
+			<componentType>Autoattendant</componentType>
+		</params>
+	</api>
+
+	<api name="get_cosmo_conference_detail_handler">
+		<params>
+			<url>http://&BOSSURL;/Account/CosmoConferenceDetailsHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_contract_details">
+		<params>
+			<url>http://&BOSSURL;/Contract/AllContractsHandler</url>
+			<accountId>11618</accountId>
+			<locationId>-1</locationId>
+			<SelectedAccountId>11618</SelectedAccountId>
+			<ProjectManagerId>-1</ProjectManagerId>
+			<ContractTypeId>-1</ContractTypeId>
+			<ContractStatusId>-1</ContractStatusId>
+		</params>
+	</api>
+
+	<api name="get_cluster_detail">
+		<params>
+			<url>http://&BOSSURL;/Cluster/ClusterDetailsHandler</url>
+			<accountId>1</accountId>
+		</params>
+	</api>
+
+	<api name="dm_details">
+		<params>
+			<url>http://&BOSSURL;/Account/GetDecisionMakersForSelectedAccount</url>
+			<selectedAccountId>11549</selectedAccountId>
+		</params>
+	</api>
+
+	<api name="get_account_detail">
+		<params>
+			<url>http://&BOSSURL;/Account/AccountDetailsHandlerData</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_location_detail">
+		<params>
+			<url>http://&BOSSURL;/Account/AccountLocationsDataGridHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_locations">
+		<params>
+			<url>https://&BOSSURL;/CallFlow/GetLocations</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_partition_detail">
+		<params>
+			<url>http://&BOSSURL;/Account/PartitionDetailsData</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_profile_detail">
+		<params>
+			<url>http://&BOSSURL;/Person/UsersDetailsHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+		</params>
+	</api>
+
+	<api name="get_usergroup_detail">
+		<params>
+			<url>http://&BOSSURL;/UserGroup/UserGroupDetailsHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+		</params>
+	</api>
+
+	<api name="get_person_detail">
+		<params>
+			<url>http://&BOSSURL;/Person/UsersDetailsHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+		</params>
+	</api>
+
+	<api name="get_order_detail">
+		<params>
+			<url>http://&BOSSURL;/Account/OrderHandlerData</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+		</params>
+	</api>
+
+	<api name="get_vcfe_detail">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/VisualCallFlowHandler</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+		</params>
+	</api>
+
+	<api name="update_person_details">
+		<params>
+			<url>http://&BOSSURL;/Person/UpdatePersonDetails</url>
+			<accountId>12151</accountId>
+			<locationId>-1</locationId>
+			<id>businessEmail</id>
+			<value>cuser32@test.com</value>
+			<syncAddOnEmails>false</syncAddOnEmails>>
+			<personId>11047</personId>
+
+		</params>
+	</api>
+	
+	<api name="add_account_codes">
+		<params>
+			<url>http://&BOSSURL;/Partition/PartitionCodesEditableGridHandler</url>
+			<accountId>12151</accountId>
+			<locationId>-1</locationId>
+			<partitionId>29</partitionId>
+			<newValues></newValues>
+		</params>
+	</api>
+
+	<api name="delete_account_codes">
+		<params>
+			<url>http://&BOSSURL;/Partition/PartitionCodesEditableGridHandler</url>
+			<newValues></newValues>
+			<delete>true</delete>
+
+		</params>
+	</api>
+
+	<api name="create_pickup_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/CreateCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<data></data>
+			<componentType>PickUpGroup</componentType>
+			<profileLocationId>-1</profileLocationId>
+			<tnCountryId>null</tnCountryId>
+		</params>
+
+	</api>
+
+	<api name="delete_pickup_group">
+		<params>
+			<url>http://&BOSSURL;/CallFlow/DeleteCosmoComponent</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<id>-1</id>
+			<componentType>PickUpGroup</componentType>
+		</params>
+	</api>
+
+	<api name="configure_prog_button">
+		<params>
+			<url>http://&BOSSURL;/Profile/ProgButtons</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+		</params>
+	</api>
+
+	<api name="add_phone">
+		<params>
+			<url>http://&BOSSURL;/Phone/AJAX_AddEditPhone</url>
+			<accountId>1</accountId>
+			<locationId>-1</locationId>
+			<partitionId>-1</partitionId>
+			<Phone_Exists>false</Phone_Exists>
+			<SelectedProfileId>-1</SelectedProfileId>
+		</params>
+	</api>
+
+</Root>

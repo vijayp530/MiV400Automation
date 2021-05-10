@@ -1,0 +1,4 @@
+ecenable handset enable
+csxgistsyncdisable halaudio
+csxgistremallpoints
+q

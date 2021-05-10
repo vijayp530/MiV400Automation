@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210325 09:18:32.145" generator="Robot 3.2.1 (Python 2.7.17 on win32)">
+<suite source="C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\TestCases\Test.robot" id="s1" name="Test">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Phones Initialization</arg>
+<arg>Get DUT Details</arg>
+</arguments>
+<kw name="Phones Initialization" library="Setup_And_Teardown">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${pbx}" == "Asterisk"</arg>
+<arg>Asterisk_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MxOne"</arg>
+<arg>MxOne_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiV400"</arg>
+<arg>MiV400_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiV5000"</arg>
+<arg>MiV5000_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Telepo"</arg>
+<arg>Telepo_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "WebUI"</arg>
+<arg>WebUI_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiCloud"</arg>
+<arg>MiCloud_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Clearspan"</arg>
+<arg>Clearspan_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "MiVoice"</arg>
+<arg>MiVoice_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${pbx}" == "Manual"</arg>
+<arg>Manual_Phone_Initialization</arg>
+<arg>ELSE</arg>
+<arg>FATAL ERROR</arg>
+<arg>Wrong "DUT" value passed!!!</arg>
+</arguments>
+<kw name="MiV400_Initialization" library="Setup_And_Teardown">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>${EXEC_DIR}${/}..${/}6.0_Desktop_Automation/Variables/MiV400_Initialization.robot</arg>
+</arguments>
+<status status="PASS" endtime="20210325 09:18:33.984" starttime="20210325 09:18:32.806"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${dut}" == "PhoneA"</arg>
+<arg>Phone_A_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneB"</arg>
+<arg>Phone_B_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneC"</arg>
+<arg>Phone_C_Initialization</arg>
+<arg>ELSE IF</arg>
+<arg>"${dut}" == "PhoneD"</arg>
+<arg>Phone_D_Initialization</arg>
+<arg>ELSE</arg>
+<arg>FATAL ERROR</arg>
+<arg>Wrong "DUT" value passed</arg>
+</arguments>
+<assign>
+<var>${phone1}</var>
+<var>${phone2}</var>
+<var>${phone3}</var>
+<var>${phone4}</var>
+</assign>
+<kw name="Phone_A_Initialization" library="MiV400_Initialization">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>P1</arg>
+</arguments>
+<assign>
+<var>${PhoneA}</var>
+</assign>
+<msg timestamp="20210325 09:18:33.988" level="FAIL">No library 'P1' found.</msg>
+<status status="FAIL" endtime="20210325 09:18:33.988" starttime="20210325 09:18:33.987"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.988" starttime="20210325 09:18:33.987"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.988" starttime="20210325 09:18:33.985"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.989" starttime="20210325 09:18:32.805"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.989" starttime="20210325 09:18:32.803"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.989" starttime="20210325 09:18:32.803"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:33.989" starttime="20210325 09:18:32.802"></status>
+</kw>
+<test id="s1-t1" name="750191:TC001 Phone Registration">
+<tags>
+<tag>Owner: Ram</tag>
+<tag>RegisterPhonex`</tag>
+<tag>Reviewer:</tag>
+</tags>
+<timeout value="25 minutes"></timeout>
+<status status="FAIL" endtime="20210325 09:18:33.991" critical="yes" starttime="20210325 09:18:33.989">Parent suite setup failed:
+No library 'P1' found.</status>
+</test>
+<test id="s1-t2" name="750192: TC002 Phone De-Registration">
+<tags>
+<tag>DeRegisterPhone</tag>
+<tag>Owner: Ram</tag>
+<tag>Reviewer:</tag>
+</tags>
+<timeout value="25 minutes"></timeout>
+<status status="FAIL" endtime="20210325 09:18:33.996" critical="yes" starttime="20210325 09:18:33.994">Parent suite setup failed:
+No library 'P1' found.</status>
+</test>
+<kw type="teardown" name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>RUN KEYWORDS</arg>
+<arg>Check Phone Connection</arg>
+<arg>Generic Test Teardown</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Check Phone Connection</arg>
+<arg>Generic Test Teardown</arg>
+</arguments>
+<kw name="Check Phone Connection" library="Setup_And_Teardown">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>CHECKING CONNECTION ON PHONES</arg>
+</arguments>
+<status status="PASS" endtime="20210325 09:18:34.007" starttime="20210325 09:18:34.006"></status>
+</kw>
+<kw type="for" name="${phone} IN [ @{executionPhones} ]">
+<msg timestamp="20210325 09:18:34.007" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 192: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20210325 09:18:34.008" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 192: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20210325 09:18:34.013" level="FAIL">Variable '@{executionPhones}' not found.</msg>
+<status status="FAIL" endtime="20210325 09:18:34.013" starttime="20210325 09:18:34.007"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:34.014" starttime="20210325 09:18:34.005"></status>
+</kw>
+<kw name="Generic Test Teardown" library="Setup_And_Teardown">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Calling Generic Teardown"</arg>
+</arguments>
+<status status="PASS" endtime="20210325 09:18:34.016" starttime="20210325 09:18:34.015"></status>
+</kw>
+<kw type="for" name="${phone} IN [ @{executionPhones} ]">
+<msg timestamp="20210325 09:18:34.017" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 197: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20210325 09:18:34.018" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 197: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20210325 09:18:34.023" level="FAIL">Variable '@{executionPhones}' not found.</msg>
+<status status="FAIL" endtime="20210325 09:18:34.023" starttime="20210325 09:18:34.016"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:34.024" starttime="20210325 09:18:34.014"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:34.024" starttime="20210325 09:18:34.004"></status>
+</kw>
+<status status="PASS" endtime="20210325 09:18:34.024" starttime="20210325 09:18:34.003"></status>
+</kw>
+<status status="FAIL" endtime="20210325 09:18:34.024" starttime="20210325 09:18:32.149">Suite setup failed:
+No library 'P1' found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">DeRegisterPhone</stat>
+<stat fail="2" pass="0">Owner: Ram</stat>
+<stat fail="1" pass="0">RegisterPhonex`</stat>
+<stat fail="2" pass="0">Reviewer:</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Test" pass="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210325 09:18:33.960" level="ERROR">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\Variables\MiV400_Initialization.robot' on line 2: Initializing test library 'PhoneComponent' with arguments [ phoneModel=Mitel6940 | ipAddress=10.211.140.182 | extensionNumber=8004 | phoneName=8004 ] failed: FileNotFoundException: Unable to find assembly 'ATAP'.
+   at Python.Runtime.CLRModule.AddReference(String name)
+Traceback (most recent call last):
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\lib\PhoneComponent.py", line 36, in __init__
+    self.phone_obj = PhoneInterface(params)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\PhoneInterface.py", line 49, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 49, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 73, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 120, in add_reference_to_dll
+    clr.AddReference(dll_name.split('.')[0])</msg>
+<msg timestamp="20210325 09:18:33.981" level="ERROR">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\Variables\MiV400_Initialization.robot' on line 3: Initializing test library 'PhoneComponent' with arguments [ phoneModel=Mitel6930 | ipAddress=10.211.140.180 | extensionNumber=8001 | phoneName=8001 ] failed: FileNotFoundException: Unable to find assembly 'ATAP'.
+   at Python.Runtime.CLRModule.AddReference(String name)
+Traceback (most recent call last):
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\lib\PhoneComponent.py", line 36, in __init__
+    self.phone_obj = PhoneInterface(params)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\PhoneInterface.py", line 49, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 49, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 73, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Users\pawarr\Desktop\Test_Robot_Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 120, in add_reference_to_dll
+    clr.AddReference(dll_name.split('.')[0])</msg>
+<msg timestamp="20210325 09:18:34.007" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 192: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20210325 09:18:34.008" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 192: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20210325 09:18:34.017" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 197: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20210325 09:18:34.018" level="WARN">Error in file 'C:\Users\pawarr\Desktop\Test_Robot_Automation\6.0_Desktop_Automation\RobotKeywords\Setup_And_Teardown.robot' in FOR loop starting on line 197: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+</errors>
+</robot>
